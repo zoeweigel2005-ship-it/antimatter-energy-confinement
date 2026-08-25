@@ -54,7 +54,7 @@ This repository provides a numerical workbench to simulate these two coupled dom
 
 ```bash
 # Clone the repository
-git clone [https://github.com/zoeweigel2005-ship-it/antimatter-energy-confinement.git](https://github.com/zoeweigel2005-ship-it/antimatter-energy-confinement.git)
+git clone https://github.com/zoeweigel2005-ship-it/antimatter-energy-confinement.git
 cd antimatter-energy-confinement
 
 # Install dependencies
