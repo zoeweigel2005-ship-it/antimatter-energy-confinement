@@ -48,6 +48,7 @@ This repository provides a numerical workbench to simulate these two coupled dom
 ├── main.py                # Simulation runner & Matplotlib visualizer
 ├── requirements.txt       # Project dependencies (NumPy, SciPy, Matplotlib, Numba)
 └── README.md              # Project documentation
+```
 
 ## Quick Start
 
