@@ -3,25 +3,62 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 
-A Python-based numerical simulation framework investigating the confinement of relativistic antiprotons in Penning–Malmberg traps and the energy release mechanisms associated with proton–antiproton annihilation.
+A Python-based computational physics framework investigating the theoretical feasibility of antimatter (specifically proton-antiproton, $p\bar{p}$) as an ultra-high energy density storage medium. The project couples 3D relativistic trajectory integration in electromagnetic traps with Monte Carlo branching ratio modeling of annihilation products.
 
-The project combines charged-particle dynamics, relativistic electromagnetic interactions, and Monte Carlo annihilation modeling to explore antimatter as a potential ultra-high-energy-density storage medium.
+---
 
-## Key Features
+## 🎯 Project Background & Motivation
 
-1. **Relativistic Particle-in-Cell Boris Pusher**
-   - Simulates antiproton trajectories in a Penning–Malmberg trap under coupled quadrupolar electrostatic and axial magnetic fields.
-   - Includes relativistic corrections and long-term orbital stability analysis.
+This personal research project originated as an extension of an academic inquiry into antimatter as an ultimate energy storage concept. While the theoretical energy density of matter-antimatter annihilation ($2c^2 \approx 1.8 \times 10^{17}\text{ J/kg}$) exceeds chemical fuels by nine orders of magnitude, physical implementation faces two critical engineering bottlenecks:
 
-2. **Monte Carlo Annihilation Cascades**
-   - Simulates dominant \(p\bar{p}\) annihilation channels and pion production.
-   - Estimates kinetic energy distributions and conversion efficiencies for advanced energy recovery concepts.
+1. **Confinement & Storage:** Charged antimatter (such as antiprotons) must be kept strictly isolated from baryonic matter using complex electromagnetic geometries to prevent premature annihilation.
+2. **Energy Recovery Dynamics:** Annihilation does not directly yield thermal energy or pure electricity, but rather energetic pions ($\pi^\pm, \pi^0$) with relativistic kinetic energies, imposing strict limits on direct magnetohydrodynamic (MHD) recovery.
+
+This repository provides a numerical workbench to simulate these two coupled domains in a reproducible, modular environment.
+
+---
+
+## ⚙️ Core Architecture & Physics
+
+| Module | Physics & Numerical Methods | Key Output / Purpose |
+| :--- | :--- | :--- |
+| `penning_trap.py` | Relativistic Boris Pusher (Particle-in-Cell step) preserving phase-space volume. Computes trajectories inside a Penning-Malmberg trap with axial magnetic field $B_0$ and quadrupolar electrostatic field $V_0$. Accelerated with **Numba** (`@njit`). | Phase stability, cyclotron/magnetron orbital drift, non-neutral confinement tracking. |
+| `annihilation.py` | Monte Carlo branching ratio generator based on empirical Poisson multiplicity distributions for charged ($\pi^\pm$) and neutral ($\pi^0$) pion cascades in low-energy $p\bar{p}$ annihilation. | Partitioning of usable kinetic MHD power vs. prompt gamma-ray unconfined radiative losses. |
+| `main.py` | Simulation orchestration, statistical aggregation, and 3D / 2D phase-space visualization via `matplotlib`. | End-to-end execution and graphical trajectory analysis. |
+
+---
+
+## 📊 Key Results & Insights
+
+* **Theoretical Specific Energy Density:** $\sim 1.80 \times 10^{17}\text{ J/kg}$.
+* **MHD Direct Conversion Potential:** $\sim 66.7\%$ of total annihilation energy is channeled into charged pions ($\pi^\pm$), which can be guided and converted via magnetic field coils / MHD channels.
+* **Radiative Losses:** $\sim 33.3\%$ of energy rapidly decays into unconfined, highly penetrating gamma rays (from $\pi^0 \to 2\gamma$), requiring heavy secondary radiation shielding.
+
+*(Optional: Insert screenshot of the 3D trajectory and radial plane projection here)*
+
+---
+
+## 📁 Repository Structure
+
+```text
+.
+├── src/
+│   ├── annihilation.py    # Monte Carlo pion cascade & energy partitioning
+│   └── penning_trap.py    # Relativistic Boris integrator & field definitions
+├── main.py                # Simulation runner & Matplotlib visualizer
+├── requirements.txt       # Project dependencies (NumPy, SciPy, Matplotlib, Numba)
+└── README.md              # Project documentation
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/zoeweigel2005-ship-it/antimatter-energy-confinement.git
+# Clone the repository
+git clone [https://github.com/zoeweigel2005-ship-it/antimatter-energy-confinement.git](https://github.com/zoeweigel2005-ship-it/antimatter-energy-confinement.git)
 cd antimatter-energy-confinement
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Run simulation
 python main.py
 ```
