@@ -31,7 +31,7 @@ This repository provides a numerical workbench to simulate these two coupled dom
 ## 📊 Key Results & Insights
 
 * **Theoretical Specific Energy Density:** $\sim 1.80 \times 10^{17}\text{ J/kg}$.
-* **MHD Direct Conversion Potential:** $\sim 66.7\%$ of total annihilation energy is channeled into charged pions ($\pi^\pm$), which can be guided and converted via magnetic field coils / MHD channels.
+* **MHD Direct Conversion Potential:** ~66.7% of total annihilation energy is channeled into charged pions ($\pi^\pm$), which can be guided and converted via magnetic field coils / MHD channels.
 * **Radiative Losses:** $\sim 33.3\%$ of energy rapidly decays into unconfined, highly penetrating gamma rays (from $\pi^0 \to 2\gamma$), requiring heavy secondary radiation shielding.
 ![Antiproton Trajectory and Radial Plane Projection](RESULT.png)
 
