@@ -33,7 +33,7 @@ This repository provides a numerical workbench to simulate these two coupled dom
 * **Theoretical Specific Energy Density:** $\sim 1.80 \times 10^{17}\text{ J/kg}$.
 * **MHD Direct Conversion Potential:** ~66.7% of total annihilation energy is channeled into charged pions ($\pi^\pm$), which can be guided and converted via magnetic field coils / MHD channels.
 * **Radiative Losses:** ~ 33.3% of energy rapidly decays into unconfined, highly penetrating gamma rays (from $\pi^0 \to 2\gamma$), requiring heavy secondary radiation shielding.
-![Antiproton Trajectory and Radial Plane Projection](RESULT.png)
+![Antiproton Trajectory and Radial Plane Projection](Result/RESULT.png)
 
 ### 📊 Simulation Analysis
 * **Radial Confinement (XY Plane):** The projection clearly demonstrates the expected Penning trap dynamics. The antiproton exhibits a tight, high-frequency **cyclotron motion** superimposed on a slower, macroscopic **magnetron drift** ($\vec{E} \times \vec{B}$), ensuring perfectly stable radial confinement.
