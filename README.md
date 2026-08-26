@@ -9,7 +9,12 @@ A Python-based computational physics framework investigating the theoretical fea
 
 ## 🎯 Project Background & Motivation
 
-This personal research project originated as an extension of an academic inquiry into antimatter as an ultimate energy storage concept. While the theoretical energy density of matter-antimatter annihilation ($2c^2 \approx 1.8 \times 10^{17}\text{ J/kg}$) exceeds chemical fuels by nine orders of magnitude, physical implementation faces two critical engineering bottlenecks:
+# Antimatter Energy & Confinement Simulation
+
+> **Note / Context:** *This independent side project was developed during my spare time out of pure curiosity, as an extension of an academic inquiry into antimatter as an ultimate energy storage concept.*
+
+## Overview
+ While the theoretical energy density of matter-antimatter annihilation ($2c^2 \approx 1.8 \times 10^{17}\text{ J/kg}$) exceeds chemical fuels by nine orders of magnitude, physical implementation faces two critical engineering bottlenecks:
 
 1. **Confinement & Storage:** Charged antimatter (such as antiprotons) must be kept strictly isolated from baryonic matter using complex electromagnetic geometries to prevent premature annihilation.
 2. **Energy Recovery Dynamics:** Annihilation does not directly yield thermal energy or pure electricity, but rather energetic pions ($\pi^\pm, \pi^0$) with relativistic kinetic energies, imposing strict limits on direct magnetohydrodynamic (MHD) recovery.
